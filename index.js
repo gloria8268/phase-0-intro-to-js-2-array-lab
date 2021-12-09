@@ -22,16 +22,20 @@ const destructivelyRemoveFirstCat = () => {
 destructivelyRemoveFirstCat();
 
 const appendCat = (name) => {
-    const newCats = [...cats, name];
+    const newCats = cats.concat();
+    newCats.push(name);
     return newCats;
 }
 appendCat('Broom');
 
-const prependCat = name => {
-    const newCats2 = [name, ...cats];
+
+const prependCat = (name) => {
+    const newCats2 = cats.concat();
+    newCats2.unshift(name);
     return newCats2;
 }
-prependCat('Arnold')
+prependCat('Arnold');
+
 
 const removeLastCat = () => {
     const newCats3 = cats.slice(0, -1);
@@ -44,3 +48,17 @@ const removeFirstCat = (name) =>  {
     return newCats4;
 }
 removeFirstCat();
+
+// const appendCat = (name) => {
+//     const newCats = [...cats, name];
+//     return newCats;
+// }
+// appendCat('Broom');
+
+// const prependCat = name => {
+//     const newCats2 = [name, ...cats];
+//     return newCats2;
+// }
+// prependCat('Arnold')
+
+
